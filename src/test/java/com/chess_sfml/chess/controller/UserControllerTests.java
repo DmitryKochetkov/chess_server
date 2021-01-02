@@ -2,8 +2,8 @@ package com.chess_sfml.chess.controller;
 
 import com.chess_sfml.chess.entity.User;
 import com.chess_sfml.chess.service.UserService;
-import org.junit.Before;
 import org.junit.Test;
+import org.junit.jupiter.api.BeforeAll;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc;
@@ -27,7 +27,7 @@ public class UserControllerTests {
     @Autowired
     private UserService userServiceMock;
 
-    @Before
+    @BeforeAll
     public void setup() {
         User user = new User();
         user.setUsername("best_user");
